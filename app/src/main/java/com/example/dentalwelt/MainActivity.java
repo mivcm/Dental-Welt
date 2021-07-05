@@ -11,13 +11,14 @@ import android.widget.Toast;
 import com.example.dentalwelt.db.dbHelper;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnConectar;
+    Button btnConectar, btnMostrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnConectar = findViewById(R.id.btnConectar);
+        btnMostrar = findViewById(R.id.btnMostrar);
 
         btnConectar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,10 +33,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnMostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarPacientes();
+            }
+        });
     }
 
     private void nuevoRegistro() {
         Intent intent = new Intent(this, PatientsDW.class);
+        startActivity(intent);
+    }
+
+    private void mostrarPacientes (){
+        Intent intent = new Intent(this, MostrarPacientes.class);
         startActivity(intent);
     }
 }

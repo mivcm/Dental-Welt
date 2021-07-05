@@ -8,25 +8,39 @@
 
     <Button
         android:id="@+id/btnConectar"
-        android:layout_width="188dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="111dp"
-        android:layout_marginLeft="111dp"
-        android:layout_marginBottom="135dp"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="15dp"
         android:text="Ingresar"
         android:textAllCaps="true"
         android:textSize="24sp"
         android:textStyle="bold"
         app:backgroundTint="#1E74DD"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnMostrar"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="413dp"
         android:layout_height="731dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_dw" />
+        app:srcCompat="@drawable/logo_dw"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="50dp"
+        android:text="Mostrar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="#1E74DD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
