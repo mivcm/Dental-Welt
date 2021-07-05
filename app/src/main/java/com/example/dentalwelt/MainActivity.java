@@ -2,6 +2,7 @@ package com.example.dentalwelt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -25,10 +26,16 @@ public class MainActivity extends AppCompatActivity {
                 SQLiteDatabase db = dbH.getWritableDatabase();
                 if (db != null){
                     Toast.makeText(MainActivity.this, "BASE DE DATOS CREADA CON ÉXITO", Toast.LENGTH_LONG).show();
+                    nuevoRegistro();
                 } else {
                     Toast.makeText(MainActivity.this, "ERROR AL CREAR BASE DE DATOS", Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    private void nuevoRegistro() {
+        Intent intent = new Intent(this, PatientsDW.class);
+        startActivity(intent);
     }
 }
